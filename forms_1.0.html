@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title> Form in html </title>
+	</head>
+	<body>
+	<style>
+	body{
+		background-color: rgb(251,205,207);
+	}
+	h1, h2{
+		text-align: center;
+		font-family: Arial, Serif;
+	}
+	form {
+	      font-family:corbel;
+	      text-align:justify;
+	      z-index:-2;
+	}
+	form input{
+		    border:1px solid black;
+	}
+	legend {
+		color:blue;
+	}
+	form a{
+		text-decoration:none;
+	}
+	form a:hover{
+		color:red;
+	}
+	.pic{
+		height:auto;
+		width:40%;
+		margin-left:55%;
+		margin-top:2.3em;
+		position:absolute;
+	}
+	hr{
+		width:50%;
+		margin-left:0px;
+		margin-top:-1.2em;
+	}
+	.st_cnic_1, .st_cnic_2, .f_cnic_1, .f_cnic_2{
+		width:5%;
+	}
+	.st_cnic_3, .f_cnic_3{
+		width:2%;
+	}
+	</style>
+	<h1> Emerson University Multan </h1>
+	<h2> Student Form </h2>
+	
+	<img class="pic" src="pic.jpg">
+		<form>	
+			&nbsp;&nbsp;&nbsp;
+		   <fieldset>
+			<legend> Student Form </legend>
+			<label>Full Name* :</label>
+			<input id="text" type="text" min="3" maxlength="20" placeholder="Ahmad etc." required>
+			&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;
+			<label>Email* :</label>
+			<input id="email" type="email" placeholder="example@gmail.com" required>
+			<br><br>&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;
+			<hr>
+			<label>Phone No. :</label>
+			<input id="phone" type="phone" placeholder="03xx xxxxxxx" maxlength="11">
+			&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;
+			<label>Landline No. :</label>
+			<input id="phone" type="phone" placeholder="12345678">
+			<br><br>&nbsp;&nbsp;&nbsp;
+			<hr>
+			<label>Father/Guardian Name* :</label>
+			<input id="f_g_name" type="text" required>
+			<br><br>&nbsp;&nbsp;&nbsp;
+			<hr>
+			<label> Gender* :</label>
+			Male<input id="radio_btn" type="radio" name="gender">
+			Female<input id="radio_btn" type="radio" name="gender">
+			Other<input id="radio_btn" type="radio" name="gender">
+			&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;
+			<label> Roll No.* </label>
+			<input id="r_number" type="phone" placeholder="123456" required>
+			<br><br>&nbsp;&nbsp;&nbsp;
+			<hr>
+			<label>Date of Birth* : </label>
+			<input id="dob" type="date" required>
+			&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;
+			<label>Department* :</label>
+			I.Com<input id="depmnt" type="radio" name="depmnt" required>
+			ICS<input id="depmnt" type="radio" name="depmnt" required>
+			F.A<input id="depmnt" type="radio" name="depmnt" required>
+			FSc<input id="depmnt" type="radio" name="depmnt" required>
+			<br><br>&nbsp;&nbsp;
+			<hr>
+			&nbsp;&nbsp;
+			<label>Students CNIC/B-Form No. </label>
+			<input class="st_cnic_1" id="st_cnic" type="phone" maxlength="5" required>
+			<input class="st_cnic_2" id="st_cnic" type="phone" maxlength="7" required>
+			<input class="st_cnic_3" id="st_cnic" type="phone" maxlength="1" required>
+			<br><br>&nbsp;&nbsp;
+			<label>Father CNIC No. </label>
+			<input class="f_cnic_1" id="st_cnic" type="phone" maxlength="5" required>
+			<input class="f_cnic_2" id="st_cnic" type="phone" maxlength="7" required>
+			<input class="f_cnic_3" id="st_cnic" type="phone" maxlength="1" required>
+			<br><br>&nbsp;&nbsp;
+			<hr>
+			<b><label>Choose your Subjects :</label></b>
+			<br>&nbsp;&nbsp;
+			Mathematics<input id="subject" type="checkbox" name="subject">
+			Statistics<input id="subject" type="checkbox" name="subject">
+			English<input id="subject" type="checkbox" name="subject">
+			Physics<input id="subject" type="checkbox" name="subject">
+			Chemistry<input id="subject" type="checkbox" name="subject">
+			Computer<input id="subject" type="checkbox" name="subject">
+			Economics<input id="subject" type="checkbox" name="subject">
+			Punjabi<input id="subject" type="checkbox" name="subject">
+			Civics<input id="subject" type="checkbox" name="subject">
+			Bussiness(Any)<input id="subject" type="checkbox" name="subject">
+			Urdu<input id="subject" type="checkbox" name="subject">
+			Islamiyat<input id="subject" type="checkbox" name="subject">
+			Tarjuma-tul-Quran<input id="subject" type="checkbox" name="subject"><br>
+			Any Other<em>(Please Specify) </em> :<input id="text" type="text" min="4" maxlength="15">
+		  </fieldset>
+			<!-- Address filed -->
+			<fieldset>
+				<legend>Address</legend>
+				<label>Country :<label>
+					<select>
+						<option> Pakistan </option>
+					</select>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;
+				<label>Province :</label>
+					<select>
+						<option>Punjab</option>
+						<option>KPK</option>
+						<option>Sindh</option>
+						<option>Balochistan</option>
+						<option>Azad Kashmir side</option>
+					</select>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;
+				<label>City :<label>
+				<input id="city" type="text" maxlength="20" required>
+				<br><br>
+				<label>Home Address :</label>
+				<input style="width:70%;" id="address" type="address" required>
+			</fieldset>
+			<fieldset>
+				<legend>Accept & Submit</legend>
+				<input id="check" type="checkbox" required>
+				<a href="#">I agree all the terms and conditions</a>
+				<br><br>
+				<button onclick="reset"> Reset </button>
+				<button target="_blank"> Submit </button>
+				
+			</fieldset>
+		
+		</form>
+		
+	</body>
+</html>
